@@ -1,4 +1,6 @@
-p#notice= notice
+- if notice.present?
+  .alert.alert-info
+    p#notice= notice
 h1 Monikers
 = link_to 'New Moniker', new_moniker_path, class: 'btn btn-primary'
 .py-4

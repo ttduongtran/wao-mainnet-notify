@@ -1,4 +1,6 @@
-p#notice= notice
+- if notice.present?
+  .alert.alert-info
+    #notice= notice
 h1 Monikers
 = link_to 'New Moniker', new_moniker_path, class: 'btn btn-primary'
 .py-4
@@ -20,3 +22,6 @@ h1 Monikers
           td= link_to 'Show', moniker_path(moniker)
           td= link_to 'Edit', edit_moniker_path(moniker)
           td= link_to 'Destroy', moniker_path(moniker), method: :delete, data: { confirm: 'Are you sure?'  }
+.p-2 
+  = paginate @monikers if @monikers.present?
+
