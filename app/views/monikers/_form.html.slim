@@ -7,17 +7,17 @@
       ul
         - moniker.errors.each do |error|
           li= error.full_message
-  .field
+  .field.form-group
     = form.label :name
-    = form.text_field :name
-  .field
+    = form.text_field :name, class: 'form-control'
+  .field.form-group
     = form.label :uri
-    = form.text_field :uri
-  .field
+    = form.text_field :uri, class: 'form-control'
+  .field.form-group
     = form.label :memo
-    = form.text_area :memo
-  .field
+    = form.text_area :memo, class: 'form-control'
+  .field.form-group
     = form.label :status
-    = form.number_field :status
+    = form.number_field :status, class: 'form-control'
   .actions
-    = form.submit
+    = form.submit class: 'btn btn-primary'
