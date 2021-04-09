@@ -1,0 +1,22 @@
+p#notice= notice
+h1 Monikers
+table
+  thead
+    tr
+      th Name
+      th Uri
+      th Memo
+      th Status
+      th colspan: "3" 
+  tbody
+    - @monikers.each do |moniker|
+      tr
+        td= moniker.name
+        td= moniker.uri
+        td= moniker.memo
+        td= moniker.status
+        td= link_to 'Show', moniker
+        td= link_to 'Edit', edit_moniker_path(moniker)
+        td= link_to 'Destroy', moniker, method: :delete, data:   confirm: 'Are you sure?'  
+br/
+= link_to 'New Moniker', new_moniker_path

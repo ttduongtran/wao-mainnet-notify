@@ -1,0 +1,16 @@
+p#notice= notice
+p
+  strong Name:
+  = @moniker.name
+p
+  strong Uri:
+  = @moniker.uri
+p
+  strong Memo:
+  = @moniker.memo
+p
+  strong Status:
+  = @moniker.status
+= link_to 'Edit', edit_moniker_path(@moniker)
+| \
+= link_to 'Back', monikers_path
