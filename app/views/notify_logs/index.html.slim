@@ -1,6 +1,6 @@
 p#notice= notice
 h1 Notify Logs
-table
+table.table
   thead
     tr
       th Name
@@ -15,6 +15,6 @@ table
         td= notify_log.api_id
         td= link_to 'Show', notify_log
         td= link_to 'Edit', edit_notify_log_path(notify_log)
-        td= link_to 'Destroy', notify_log, method: :delete, data:   confirm: 'Are you sure?'  
+        td= link_to 'Destroy', notify_log, method: :delete, data:{ confirm: 'Are you sure?'  }
 br/
-= link_to 'New Notify Log', new_notify_log_path
+= link_to 'New Notify Log', new_notify_log_path, class: "btn btn-primary"
