@@ -1,0 +1,23 @@
+= form_with(model: moniker) do |form|
+  - if moniker.errors.any?
+    #error_explanation
+      h2
+        = pluralize(moniker.errors.count, "error")
+        | prohibited this moniker from being saved:
+      ul
+        - moniker.errors.each do |error|
+          li= error.full_message
+  .field
+    = form.label :name
+    = form.text_field :name
+  .field
+    = form.label :uri
+    = form.text_field :uri
+  .field
+    = form.label :memo
+    = form.text_area :memo
+  .field
+    = form.label :status
+    = form.number_field :status
+  .actions
+    = form.submit

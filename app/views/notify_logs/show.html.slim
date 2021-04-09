@@ -1,0 +1,13 @@
+p#notice= notice
+p
+  strong Name:
+  = @notify_log.name
+p
+  strong Moniker:
+  = @notify_log.moniker_id
+p
+  strong Api:
+  = @notify_log.api_id
+= link_to 'Edit', edit_notify_log_path(@notify_log)
+| \
+= link_to 'Back', notify_logs_path
