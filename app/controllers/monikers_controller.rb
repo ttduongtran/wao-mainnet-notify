@@ -1,9 +1,11 @@
 class MonikersController < ApplicationController
   before_action :set_moniker, only: %i[ show edit update destroy ]
+  has_scope :page, default: 1
+  has_scope :per, default: 10
 
   # GET /monikers or /monikers.json
   def index
-    @monikers = Moniker.all
+    @monikers = Moniker.all.order(id: :desc).page params[:page]
   end
 
   # GET /monikers/1 or /monikers/1.json

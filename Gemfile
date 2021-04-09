@@ -57,3 +57,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap', '~> 4.0'
 gem 'slim'
+gem 'sidekiq', '6.0.1'
+gem 'redis-namespace', '~> 1.7'
+gem 'sidekiq-scheduler', '~> 3.0', '>= 3.0.1'
+gem 'connection_pool'
+gem 'httparty', '~> 0.13.7'
