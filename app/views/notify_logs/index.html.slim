@@ -16,3 +16,5 @@ table.table
         td= link_to 'Show', notify_log
         td= link_to 'Edit', edit_notify_log_path(notify_log)
         td= link_to 'Destroy', notify_log, method: :delete, data:{ confirm: 'Are you sure?'  }
+.p-2 
+  = paginate @notify_logs if @notify_logs.present?
