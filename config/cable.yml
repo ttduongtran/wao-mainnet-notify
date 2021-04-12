@@ -7,5 +7,5 @@ test:
 production:
   adapter: redis
   # url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
-  url: <%= ENV.fetch("REDIS_URL") { "redis://redistogo:32d8f46028604c6790d7b61af8a51f04@scat.redistogo.com:11617/" } %>
+  url: <%= ENV.fetch("REDISTOGO_URL") { "redis://redistogo:32d8f46028604c6790d7b61af8a51f04@scat.redistogo.com:11617/" } %>
   channel_prefix: mainnet_notify_ror_production
