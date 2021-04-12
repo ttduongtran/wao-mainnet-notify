@@ -9,13 +9,16 @@ module MonikersHelper
     data.each do |item|
       mainnet_data.append(item['moniker'].downcase)
     end
-  end
 
-  def mainnet_perform(data_db, uri)
+    return mainnet_data
+  end
+  # uri = "https://btc-wbtc-mainnet.quantexe.com/api/v1/peers"
+
+  def mainnet_perform(data, uri)
     monikers_missing = []
     data_api = fetch_mainnet_api(uri)
-
-    data_db.each do |moni|
+    
+    data.each do |moni|
       if !data_api.include? moni.name.downcase
         monikers_missing.append(moni)
       end

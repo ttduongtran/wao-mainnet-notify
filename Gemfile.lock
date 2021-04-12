@@ -208,11 +208,11 @@ GEM
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
-    sidekiq (6.0.1)
-      connection_pool (>= 2.2.2)
-      rack (>= 2.0.0)
-      rack-protection (>= 2.0.0)
-      redis (>= 4.1.0)
+    sidekiq (5.2.7)
+      connection_pool (~> 2.2, >= 2.2.2)
+      rack (>= 1.5.0)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.5, < 5)
     sidekiq-scheduler (3.0.1)
       e2mmap
       redis (>= 3, < 5)
@@ -281,10 +281,11 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.1)
+  redis (~> 4.0)
   redis-namespace (~> 1.7)
   sass-rails (>= 6)
   selenium-webdriver
-  sidekiq (= 6.0.1)
+  sidekiq (= 5.2.7)
   sidekiq-scheduler (~> 3.0, >= 3.0.1)
   slim
   spring
