@@ -9,6 +9,10 @@ class NotifyLogsController < ApplicationController
   def show
   end
 
+  def api
+    @api_data = fetch_mainnet_api(ENV["API"])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_nofity_log

@@ -12,10 +12,6 @@ h1 Moniker
     p
       strong Moniker:
       = @nofity_log.moniker_id
-    p
-      strong API:
-      = @nofity_log.api_id
     hr
     .d-flex
-      = link_to 'Edit', edit_notify_log_path(@nofity_log), class: 'btn btn-info mr-2'
       = link_to 'Back', notify_logs_path, class: 'btn btn-dark mr-2'
