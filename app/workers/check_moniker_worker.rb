@@ -8,7 +8,9 @@ class CheckMonikerWorker
   def perform
     begin
       data = Moniker.all
-      mainnet_perform(data, URL_API)
+      msg = mainnet_perform(data, URL_API)
+      TelegramBot.send_msg(msg) if msg.present?
+
     rescue StandardError => e 
       puts e.message
     end

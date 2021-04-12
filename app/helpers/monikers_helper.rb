@@ -27,7 +27,7 @@ module MonikersHelper
     if monikers_missing.nil?
       puts "Nothing"
     else
-      puts "Sending notice monikers_missing"
+      puts "Sending notice monikers_missing to telegram"
       monikers_missing.each do |mm|
         NotifyLog.create!({
           moniker_id: mm.id,
@@ -35,6 +35,8 @@ module MonikersHelper
         })
       end
     end
+
+    return monikers_missing
   end
   
 end
