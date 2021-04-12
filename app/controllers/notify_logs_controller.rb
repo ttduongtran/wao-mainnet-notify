@@ -1,5 +1,6 @@
 class NotifyLogsController < ApplicationController
   before_action :set_nofity_log, only: %i[ show edit update destroy ]
+  include MonikersHelper
 
   def index
     @notify_logs = NotifyLog.order(id: :desc).page params[:page]
@@ -9,8 +10,8 @@ class NotifyLogsController < ApplicationController
   def show
   end
 
-  def api
-    @api_data = fetch_mainnet_api(ENV["API"])
+  def api_data
+    @api_data= fetch_mainnet_api(ENV["API"])
   end
 
   private

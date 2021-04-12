@@ -1,0 +1,5 @@
+p#notice= notice
+h1 API Data
+.container
+  - @api_data.each do |item|
+    .btn.btn-sm.btn-outline-info.m-1= item.to_s
