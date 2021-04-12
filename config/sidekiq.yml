@@ -7,4 +7,4 @@ production:
 :dynamic: true
 :schedule:    
   CheckMonikerWorker:
-    every: ["2m"]
+    every: ["30m"]
