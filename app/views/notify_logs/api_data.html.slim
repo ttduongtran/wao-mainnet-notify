@@ -1,5 +1,12 @@
 p#notice= notice
 h1 API Data
-.container
-  - @api_data.each do |item|
-    .btn.btn-sm.btn-outline-info.m-1= item.to_s
+.container 
+  .p-3.bg-light
+    h3.text-primary BTC_ETH
+    - @data_btc_eth.each do |item|
+      .btn.btn-sm.btn-outline-info.m-1= item.to_s
+  hr.m-3
+  .p-3.bg-light
+    h3.text-primary BTC_BSC
+    - @data_btc_bsc.each do |item|
+      .btn.btn-sm.btn-outline-info.m-1= item.to_s

@@ -9,16 +9,16 @@ h1 Monikers
     p#notice= notice
     p
       strong Name:
-      = @moniker.name
+      span.px-2= @moniker.name
     p
-      strong Uri:
-      = @moniker.uri
-    p
-      strong Memo:
-      = @moniker.memo
+      strong Type:
+      span.px-2= @moniker.moniker_type
     p
       strong Status:
-      = @moniker.status
+      span.px-2= @moniker.status
+    p
+      strong Memo:
+      span.px-2= @moniker.memo
     hr
     .d-flex
       = link_to 'Edit', edit_moniker_path(@moniker), class: 'btn btn-info mr-2'

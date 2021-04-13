@@ -9,15 +9,15 @@
           li= error.full_message
   .field.form-group
     = form.label :name
-    = form.text_field :name, class: 'form-control'
+    = form.text_field :name, required: true, class: 'form-control'
   .field.form-group
-    = form.label :uri
-    = form.text_field :uri, class: 'form-control'
+    = form.label :moniker_type
+    = form.select :moniker_type, Moniker.moniker_types.map{|k,v| [k,k]}, {}, {class: 'form-control', required: true}
+  .field.form-group
+    = form.label :status
+    = form.select :status, Moniker.statuses.map{|k,v| [k,k]}, {}, {class: 'form-control', required: true}
   .field.form-group
     = form.label :memo
     = form.text_area :memo, class: 'form-control'
-  .field.form-group
-    = form.label :status
-    = form.number_field :status, class: 'form-control'
   .actions
     = form.submit class: 'btn btn-primary'

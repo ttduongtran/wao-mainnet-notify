@@ -12,7 +12,6 @@ module MonikersHelper
 
     return mainnet_data
   end
-  # uri = "https://btc-wbtc-mainnet.quantexe.com/api/v1/peers"
 
   def mainnet_perform(data, uri)
     monikers_missing = []

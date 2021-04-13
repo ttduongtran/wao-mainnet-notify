@@ -11,7 +11,8 @@ class NotifyLogsController < ApplicationController
   end
 
   def api_data
-    @api_data= fetch_mainnet_api(ENV["API"])
+    @data_btc_eth= fetch_mainnet_api(ENV["API_BTC_ETH"])
+    @data_btc_bsc= fetch_mainnet_api(ENV["API_BTC_BSC"])
   end
 
   private
