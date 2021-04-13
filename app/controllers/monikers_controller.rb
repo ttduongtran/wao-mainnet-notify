@@ -1,6 +1,5 @@
 class MonikersController < ApplicationController
   before_action :set_moniker, only: %i[ show edit update destroy ]
-  # after_action :set_status, only: %i[ create ]
 
   # GET /monikers or /monikers.json
   def index
@@ -68,8 +67,4 @@ class MonikersController < ApplicationController
       params.require(:moniker).permit(:name, :uri, :memo, :status, :moniker_type)
     end
 
-    def set_status
-      moniker = Moniker.find(params[:id])
-      moniker.status = 1 unless moniker.status.nil?
-    end
 end
