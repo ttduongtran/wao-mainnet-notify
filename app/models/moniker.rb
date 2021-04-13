@@ -2,13 +2,13 @@ class Moniker < ApplicationRecord
   after_save :set_default_status
   
   enum moniker_type:{
-    "btc_eth": 0,
-    "btc_bsc": 1
+    "BTC_ETH": 0,
+    "BTC_BSC": 1
   }
 
   enum status:{
-    "offline": 0,
-    "online": 1
+    "Offline": 0,
+    "Online": 1
   }
 
 
