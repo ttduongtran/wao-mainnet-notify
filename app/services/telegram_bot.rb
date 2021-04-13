@@ -1,6 +1,6 @@
 class TelegramBot
   class << self
-    def send_msg(msg, chat_id=566854719)
+    def send_msg(msg, chat_id=ENV["TELEGRAM_CHAT_ID"])
       # token = "1328720022:AAFZxTo3k325Q6TzGUXv32FJuy46iUpcLO8"
       token = ENV["TELEGRAM_TOKEN"]
       url = "https://api.telegram.org/bot#{token}/sendMessage"
