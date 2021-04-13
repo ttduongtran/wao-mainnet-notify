@@ -7,7 +7,7 @@ production:
 :dynamic: true
 :schedule:    
   CheckMonikerWorker:
-    every: ["30m"]
+    every: ["3m"]
   DestroyNotifyLogsWorker:
     cron: 0 23 * * *
     class: DestroyNotifyLogsWorker

@@ -17,7 +17,8 @@ h1 Monikers
         tr
           td= moniker.name
           td= moniker.moniker_type
-          td= moniker.status
+          td
+            span[class="#{moniker.status == 'Offline' ? 'btn btn-sm btn-danger p-1' : 'btn btn-sm btn-success  p-1'}"]= moniker.status
           td= moniker.memo
           td= link_to 'Show', moniker_path(moniker)
           td= link_to 'Edit', edit_moniker_path(moniker)
