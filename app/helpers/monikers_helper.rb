@@ -29,7 +29,7 @@ module MonikersHelper
     if monikers_missing.nil?
       puts "Nothing"
     else
-      puts "Sending notice monikers_missing to telegram"
+      puts "Sending notice monikers_missing to telegram from: #{uri}"
       monikers_missing.each do |mm|
         Moniker.update(mm.id, status: 0)
         NotifyLog.create!({
@@ -50,7 +50,7 @@ module MonikersHelper
       end
     end
     
-    return rs.delete_suffix(", ") + " are offline" if rs.present? 
+    return rs.delete_suffix(", ") + " are offline (#{ENV['ENVIRONMENT']})" if rs.present? 
 
   end
   
