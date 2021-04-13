@@ -16,7 +16,8 @@ h1 Monikers
       - @monikers.each do |moniker|
         tr
           td= moniker.name
-          td= moniker.moniker_type
+          td
+            span[class="#{moniker.moniker_type == 'BTC_ETH' ? 'text-primary p-1' : 'text-success  p-1'}"]= moniker.moniker_type
           td
             span[class="#{moniker.status == 'Offline' ? 'btn btn-sm btn-danger p-1' : 'btn btn-sm btn-success  p-1'}"]= moniker.status
           td= moniker.memo
