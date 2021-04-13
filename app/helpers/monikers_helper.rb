@@ -25,9 +25,9 @@ module MonikersHelper
       end
     end
 
+    Moniker.update_all(status: 1)
     if monikers_missing.nil?
       puts "Nothing"
-      Moniker.update_all(status: 1)
     else
       puts "Sending notice monikers_missing to telegram"
       monikers_missing.each do |mm|
