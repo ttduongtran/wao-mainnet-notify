@@ -8,3 +8,6 @@ production:
 :schedule:    
   CheckMonikerWorker:
     every: ["30m"]
+  DestroyNotifyLogsWorker:
+    cron: 0 23 * * *
+    class: DestroyNotifyLogsWorker
