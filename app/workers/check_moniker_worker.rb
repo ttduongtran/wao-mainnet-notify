@@ -13,7 +13,8 @@ class CheckMonikerWorker
       
       msg = msg_btc_eth + msg_btc_bsc
 
-      TelegramBot.send_msg(parse_to_message(msg)) if msg.present?
+      TelegramBot.send_msg(parse_to_message(msg), ENV["TELEGRAM_CHAT_ID"], token = ENV["TELEGRAM_TOKEN"]) if msg.present?
+      TelegramBot.send_msg(parse_to_message(msg), ENV["TELEGRAM_CHAT_ID_TEST"], token = ENV["TELEGRAM_TOKEN_TEST"]) if msg.present?
 
     rescue StandardError => e 
       puts e.message
